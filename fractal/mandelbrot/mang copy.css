@@ -1,0 +1,16 @@
+.box {
+  width: 800px;
+  margin: 50px auto;
+}
+#myCanvas {
+  border: 1px solid gray;
+}
+input {
+  width: 60px;
+  margin: 0 10px;
+  text-align: center;
+}
+div {
+  margin-bottom: 5px;
+  font-size: 13px;
+}

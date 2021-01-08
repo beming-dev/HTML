@@ -1,0 +1,201 @@
+body, html{
+    background-color: #292A2D;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+}
+
+#wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#header_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
+}
+
+#border{
+    border-bottom: 1px solid #393A3C;
+    width: 100%;
+}
+
+#header_img{
+    background: url(img/naver.png);
+   background-size: cover;
+    width: 150px;
+    height: 70px;
+    padding: 10px;
+}
+
+#search{
+    width: 350px;
+    height: 30px;
+    border: 1.5px solid rgb(25,206,96);
+    border-right: none;
+    background-color: #292A2D;
+    padding-left: 5px;
+    color: white;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+#search:focus{
+    outline: none;
+}
+
+#search_area{
+    display: flex;
+}
+
+#search_btn{
+    background: url(img/search_btn_img2.png);
+    background-size: 35px;
+    border: 1.5px solid  rgb(25,206,96);
+    width: 35px;
+}
+
+.nav{
+    display: inline;
+}
+
+.nav a{
+    color: rgb(25,206,96);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 0.3rem;
+}
+
+.nav2{
+    display: inline;
+}
+
+.nav2 a{
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 0.3rem;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+}
+#nav1{
+    display: inline;
+    margin: 0;
+    flex-shrink: 0;
+}
+#nav2{
+    display: inline;
+    padding-left:  0.3rem;
+    margin: 0;
+    flex-shrink: 0;
+}
+#nav3{
+    display: inline;
+}
+
+#showMore{
+    flex-shrink: 0;
+    padding-left:  1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1px;
+    align-self: center;
+    padding-bottom: 3px;
+}
+#showMore:hover{
+    text-decoration: underline;
+}
+
+
+#container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(30,31,33);
+    width: 100%;
+    justify-content: center;
+}
+
+#contentLeft{
+    display: flex;
+    width: 550px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#SBIAdd{
+    background: url(img/SBIAdd.png);
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    margin: 20px;
+    border: none;
+}
+
+#contentRight{
+    display: flex;
+    width: 240px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#loginBox{
+    width: 100%;
+    height: 100px;
+    background-color: #393A3C;
+    margin: 10px;
+    padding: 10px;
+}
+
+#explainLogin{
+    font-size: 1px;
+    color: aliceblue;
+}
+
+#findIP a{
+    text-decoration: none;
+    font-size: 1px;
+    color: white;
+}
+
+#findIP{
+    margin-right: 30px;
+}
+
+#signIn a{
+    text-decoration: none;
+    font-size: 1px;
+    color: white;
+}
+
+#btnLogin{
+    background:url(img/naverLogin.png);
+    width: 100%;
+    height: 30px;
+    background-size:contain;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#sign{
+    display: flex;
+}
+
