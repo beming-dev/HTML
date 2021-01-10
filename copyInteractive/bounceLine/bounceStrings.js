@@ -35,6 +35,7 @@ export class BounceString {
     ];
 
     this.detect = 10;
+    
     this.color = color;
   }
 
