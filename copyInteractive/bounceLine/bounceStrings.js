@@ -34,14 +34,14 @@ export class BounceString {
       },
     ];
 
-    this.detext = 10;
+    this.detect = 10;
     this.color = color;
   }
 
   animate(ctx, moveX, moveY) {
     ctx.beginPath();
     ctx.fillStyle = "#ff00ff";
-    ctx.arc(moveX, moveY, 60, 0, Math.PI * 2, false);
+    ctx.arc(moveX, moveY, 20, 0, Math.PI * 2, false);
     ctx.fill();
 
     ctx.beginPath();
@@ -60,7 +60,7 @@ export class BounceString {
       )
     ) {
       this.detect = 300;
-      let tx = this.points[1].ox + moveX / 2;
+      let tx = (this.points[1].ox + moveX) / 2;
       let ty = moveY;
       this.points[1].vx = tx - this.points[1].x;
       this.points[1].vy = ty - this.points[1].y;
