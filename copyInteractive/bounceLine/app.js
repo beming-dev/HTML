@@ -1,5 +1,5 @@
 import { BounceString } from "./bounceStrings.js";
-import {Ball} from "./ball.js"
+import { Ball } from "./ball.js";
 
 class App {
   constructor() {
@@ -17,7 +17,7 @@ class App {
     window.addEventListener("resize", this.resize.bind(this), false);
     this.resize();
 
-    this.ball = new Ball(this.stageWidth, this.stageHeight, 70, 6);
+    this.ball = new Ball(this.stageWidth, this.stageHeight, 30, 8);
 
     document.addEventListener("pointerdown", this.onDown.bind(this), false);
     document.addEventListener("pointermove", this.onMove.bind(this), false);
@@ -34,14 +34,14 @@ class App {
     this.canvas.height = this.stageHeight * this.pixelRatio;
     this.ctx.scale(this.pixelRatio, this.pixelRatio);
 
-    const xGap = 20;
-    const yGap = 20;
+    const xGap = 50;
+    const yGap = 50;
     const x1 = xGap;
     const x2 = this.stageWidth - xGap;
-    const total = Math.floor((this.stageHeight -yGap) /yGap);
+    const total = Math.floor((this.stageHeight - yGap) / yGap);
 
     this.strings = [];
-    for(let i=0; i<total; i++){
+    for (let i = 0; i < total; i++) {
       this.strings[i] = new BounceString(
         {
           x1: x1,
@@ -50,11 +50,9 @@ class App {
           y2: i * yGap + yGap,
         },
         "#ff5038"
-      )
+      );
     }
-
   }
-
 
   animate() {
     window.requestAnimationFrame(this.animate.bind(this));

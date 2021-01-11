@@ -1,6 +1,6 @@
 import { lineCircle } from "./utils.js";
 
-const BOUNCE = 0.92;
+const BOUNCE = 0.9;
 
 export class BounceString {
   constructor(pos, color) {
@@ -35,15 +35,15 @@ export class BounceString {
     ];
 
     this.detect = 10;
-    
+
     this.color = color;
   }
 
   animate(ctx, moveX, moveY) {
-    ctx.beginPath();
-    ctx.fillStyle = "#ff00ff";
-    ctx.arc(moveX, moveY, 20, 0, Math.PI * 2, false);
-    ctx.fill();
+    // ctx.beginPath();
+    // ctx.fillStyle = "#ff00ff";
+    // ctx.arc(moveX, moveY, 10, 0, Math.PI * 2, false);
+    // ctx.fill();
 
     ctx.beginPath();
     ctx.strokeStyle = this.color;
@@ -60,7 +60,7 @@ export class BounceString {
         this.detect
       )
     ) {
-      this.detect = 300;
+      this.detect = 100;
       let tx = (this.points[1].ox + moveX) / 2;
       let ty = moveY;
       this.points[1].vx = tx - this.points[1].x;
