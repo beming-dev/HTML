@@ -60,6 +60,7 @@ export class Dialog {
   }
 
   down(point) {
+    console.log("down");
     if (point.collide(this.pos, WIDTH, HEIGHT)) {
       this.isDown = true;
       this.startPos = this.pos.clone();
@@ -81,7 +82,9 @@ export class Dialog {
     if (this.isDown) {
       this.target = this.startPos.clone().add(point).subtract(this.downPos);
     }
+    console.log("hello");
   }
+
   up(point) {
     this.isDown = false;
   }

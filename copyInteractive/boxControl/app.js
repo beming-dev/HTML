@@ -13,7 +13,7 @@ class App {
     this.curItem = null;
 
     this.items = [];
-    this.total = 1;
+    this.total = 2;
     for (let i = 0; i < this.total; i++) {
       this.items[i] = new Dialog();
     }
@@ -36,10 +36,10 @@ class App {
     this.canvas.height = this.stageHeight * this.pixelRatio;
     this.ctx.scale(this.pixelRatio, this.pixelRatio);
 
-    this.ctx.shadowOffSetX = 0;
-    this.ctx.shadowOffSetY = 3;
-    this.ctx.shawdowBlue = 6;
     this.ctx.shadowColor = `rgba(0, 0, 0, 0.1)`;
+    this.ctx.shadowOffsetX = 1;
+    this.ctx.shadowOffsetY = 3;
+    this.ctx.shawdowBlur = 10;
 
     this.ctx.lineWidth = 2;
 
@@ -91,7 +91,7 @@ class App {
       if (item) {
         this.curItem = item;
         const index = this.items.indexOf(item);
-        this.items.push(this.items.splice(index, 1)[0]);
+        this.items.push(this.items.splice(index, 1)[0]); //위로 올리기
         break;
       }
     }
