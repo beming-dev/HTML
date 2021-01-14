@@ -9,13 +9,13 @@ class Collision {
 
     this.pixelRatio = window.devicePixelRatio > 1 ? 2 : 1;
 
-    this.totalRect = 1;
+    this.totalRect = 5;
     this.rects = [];
     for (let i = 0; i < this.totalRect; i++) {
       this.rects[i] = new Rectangle();
     }
 
-    this.totalCircle = 1;
+    this.totalCircle = 5;
     this.circs = [];
 
     for (let i = 0; i < this.totalCircle; i++) {

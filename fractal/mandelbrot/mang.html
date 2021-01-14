@@ -4,10 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="mang copy.css" />
-    <script src="mang copy 4.js"></script>
+    <link rel="stylesheet" href="mang.css" />
   </head>
   <body>
-    <canvas class="myCanvas"> </canvas>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+    <script>
+      let canvas = document.getElementById("canvas");
+      let ctx = canvas.getContext("2d");
+      let width = 1000;
+      let height = 1000;
+
+      function mandelbrot(cr, ci, ite) {
+        let x = 0;
+        let y = 0;
+
+        for (let i = 0; i < ite; i++) {
+          x2 = x * x - y * y + cr;
+          y2 = 2 * x * y + ci;
+
+          if (x2 * x2 + y2 * y2 > 4) {
+            return false;
+          }
+
+          x = x2;
+          y = y2;
+        }
+        return true;
+      }
+
+      function draw() {
+        let ite = 20;
+        for (let a = 0; a < width; a++) {
+          for (let b = 0; b < height; b++) {
+            ra = (a - 500) / 250;
+            rb = (500 - b) / 250;
+            if (mandelbrot(ra, rb, ite)) {
+              ctx.fillStyle = "#000000";
+              ctx.fillRect(a, b, 1, 1);
+            }
+          }
+        }
+      }
+
+      draw();
+    </script>
   </body>
 </html>
