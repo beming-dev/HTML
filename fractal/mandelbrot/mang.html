@@ -40,14 +40,9 @@
           for (let b = 0; b < height; b++) {
             ra = (a - 500) / 250;
             rb = (500 - b) / 250;
-            color = mandelbrot(ra, rb, ite) * 10;
-            if (color) {
-              ctx.fillStyle = `rgb(0, 0, ${color})`;
-              ctx.fillRect(a, b, 1, 1);
-            } else {
-              ctx.fillStyle = `rgb(${color}, ${color}, ${color})`;
-              ctx.fillRect(a, b, 1, 1);
-            }
+            color = mandelbrot(ra, rb, ite) * 12;
+            ctx.fillStyle = `rgb(0, 0, ${color})`;
+            ctx.fillRect(a, b, 1, 1);
           }
         }
       }
