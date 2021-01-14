@@ -6,13 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="mang.css" />
   </head>
-  <body>
+  <body onload="main();">
     <canvas id="canvas" width="1000" height="1000"></canvas>
     <script>
       let canvas = document.getElementById("canvas");
       let ctx = canvas.getContext("2d");
-      let width = 1000;
-      let height = 1000;
 
       function mandelbrot(cr, ci, ite) {
         let x = 0;
@@ -33,13 +31,19 @@
         return 0;
       }
 
-      function draw() {
+      function draw(cx = 0, cy = 0, scale = 1) {
+        let width = 1000;
+        let height = 1000;
         let ite = 20;
         let color = null;
+
         for (let a = 0; a < width; a++) {
           for (let b = 0; b < height; b++) {
-            ra = (a - 500) / 250;
-            rb = (500 - b) / 250;
+            //ra = (a - 500) / 250;
+            //rb = (500 - b) / 250;
+            ra = ((4 * a) / width - 2) * scale + cx;
+            rb = ((4 * b) / height - 2) * scale - cy;
+
             color = mandelbrot(ra, rb, ite) * 20;
             ctx.fillStyle = `rgb(${color}, 0, 0)`;
             ctx.fillRect(a, b, 1, 1);
@@ -47,7 +51,23 @@
         }
       }
 
-      draw();
+      let s = 1;
+      function onClick(event) {
+        let canPos = canvas.getBoundingClientRect();
+        cx = event.clientX - canPos.left;
+        cy = event.clientY - canPos.top;
+        cx = (4 * cx) / 1000 - 2;
+        cy = (4 * cy) / -1000 + 2;
+        console.log((4 * cx) / 1000 - 2, (4 * cy) / -1000 + 2);
+        s *= 0.8;
+        draw(cx, cy, s);
+        console.log(cx, cy);
+      }
+
+      function main() {
+        draw();
+        window.addEventListener("click", onClick, false);
+      }
     </script>
   </body>
 </html>
