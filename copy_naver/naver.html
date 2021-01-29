@@ -1,84 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="naver.css">
-    <script src="naver.js"></script>
-</head>
-<body>
-    <div id="wrap">
-        <div id="header_container">
-            <header id="header">
-                <button id="header_img" onclick="toMain()"></button>  
-                <div id="search_area">
-                    <input id="search" type="text">
-                    <button id="search_btn"></button>
-                </div>
-            </header>
-            <div id="border"></div>
-            <nav id="nav">
-                <ul id="nav1">
-                    <li class="nav"><a href="https://www.naver.com">메일</a></li>
-                    <li class="nav"><a href="https://www.naver.com">카페</a></li>
-                    <li class="nav"><a href="https://www.naver.com">블로그</a></li>
-                    <li class="nav"><a href="https://www.naver.com">지식in</a></li>
-                    <li class="nav"><a href="https://www.naver.com">쇼핑</a></li>
-                    <li class="nav"><a href="https://www.naver.com">pay</a></li>
-                    <li class="nav"><a href="https://www.naver.com">TV</a></li>
-                </ul>
-                <ul id="nav2">
-                    <li class="nav2"><a href="https://www.naver.com">사전</a></li>
-                    <li class="nav2"><a href="https://www.naver.com">뉴스</a></li>
-                    <li class="nav2"><a href="https://www.naver.com">증권</a></li>
-                    <li class="nav2"><a href="https://www.naver.com">부동산</a></li>
-                    <li class="nav2"><a href="https://www.naver.com">지도</a></li>
-                    <li class="nav2"><a href="https://www.naver.com">영화</a></li>
-                    <li class="nav2"><a href="https://www.naver.com">VIBE</a></li>
-                    <li class="nav2"><a href="https://www.naver.com">책</a></li>
-                    <li class="nav2"><a href="https://www.naver.com">웹툰</a></li>
-                </ul>
-                <a id="showMore" href="https://www.naver.com/#">더 보기</a>
-                <ul id="nav3">
-                    
-                </ul>
-            </nav>
+    <link rel="stylesheet" href="naver.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="main_box">
+        <div class="main">
+          <img src="img/naver_logo2.png" alt="logo" />
+          <div class="search">
+            <input type="text" class="search_text" />
+            <input type="button" class="search_btn" />
+          </div>
+          <div class="others">
+            <span class="startPage"><a href="">네이버를 시작페이지로</a></span>
+            <span class="junior">
+              <a href="">쥬니어네이버</a>
+              <a href="">해피빈</a>
+            </span>
+          </div>
         </div>
-
-        <div id="container">
-            <div id="contentLeft">
-                <button id="SBIAdd" onclick="clkSBIAdd()"></button>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div id="contentRight">
-                <div id="loginBox">
-                    <div id="explainLogin">네이버를 더 안전하고 편리하게 이용하세요</div>
-                    <button id="btnLogin"></button>
-                    <div id="sign">
-                        <div id="findIP">
-                            <a href="https://www.naver.com">아이디</a>
-                            <a href="https://www.naver.com">비밀번호 찾기</a>
-                        </div>
-                        <div id="signIn">
-                            <a href="https://www.naver.com">회원가입</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="footer">
-
-        </div> 
-    </div>
-</body>
+      </div>
+      <nav class="category">
+        <ul>
+          <div class="greenText">
+            <li><a href="">메일</a></li>
+            <li><a href="">블로그</a></li>
+            <li><a href="">카페</a></li>
+            <li><a href="">지식in</a></li>
+            <li><a href="">쇼핑</a></li>
+            <li><a href="">pay</a></li>
+            <li><a href="">TV</a></li>
+          </div>
+          <div class="whiteText">
+            <li><a href="">뉴스</a></li>
+            <li><a href="">사전</a></li>
+            <li><a href="">증권</a></li>
+            <li><a href="">부동산</a></li>
+            <li><a href="">지도</a></li>
+            <li><a href="">영화</a></li>
+            <li><a href="">VIBE</a></li>
+            <li><a href="">책</a></li>
+            <li><a href="">웹툰</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="center"></div>
+    <footer class="footer"></footer>
+  </body>
 </html>

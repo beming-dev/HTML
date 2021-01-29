@@ -1,201 +1,129 @@
-body, html{
-    background-color: #292A2D;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    -webkit-text-size-adjust: none;
+html {
+  min-width: 100%;
+  height: 100%;
 }
 
-#wrap{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+body {
+  min-width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #292a2d;
 }
 
-#header_container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ul {
+  list-style-type: none;
 }
 
-#header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px;
-    /* margin-left: 10%; */
-    /* margin-right: 10%; */
+a {
+  text-decoration: none;
+  color: black;
 }
 
-#border{
-    border-bottom: 1px solid #393A3C;
-    width: 100%;
+.header {
+  min-width: 100%;
+  text-align: center;
+  background-color: #292a2d;
 }
 
-#header_img{
-    background: url(img/naver.png);
-   background-size: cover;
-    width: 150px;
-    height: 70px;
-    padding: 10px;
+.header .main_box {
+  margin: 0 auto;
+  border-bottom: 1px solid #393a3c;
 }
 
-#search{
-    width: 350px;
-    height: 30px;
-    border: 1.5px solid rgb(25,206,96);
-    border-right: none;
-    background-color: #292A2D;
-    padding-left: 5px;
-    color: white;
-    font-size: 12px;
-    flex-shrink: 0;
+.header .main {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-right: 50px;
+  height: fit-content;
 }
 
-#search:focus{
-    outline: none;
+.header .main .others {
+  display: inline-block;
+  position: relative;
+  top: -85px;
+  left: 50px;
 }
 
-#search_area{
-    display: flex;
+.header .main .startPage {
+  font-size: 1px;
+  color: grey;
+}
+.header .main .junior {
+  font-size: 1px;
+  color: grey;
 }
 
-#search_btn{
-    background: url(img/search_btn_img2.png);
-    background-size: 35px;
-    border: 1.5px solid  rgb(25,206,96);
-    width: 35px;
+.header .main img {
+  height: 50px;
+  width: 180px;
+  margin-right: 20px;
 }
 
-.nav{
-    display: inline;
+.header .main .search {
+  display: inline-block;
+  height: 52px;
+  font-size: 0;
 }
 
-.nav a{
-    color: rgb(25,206,96);
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: bold;
-    margin-left: 0.3rem;
+.header .main .search .search_text {
+  display: inline-block;
+  position: relative;
+  background-color: #292a2d;
+  color: white;
+  font-size: 20px;
+  top: -20px;
+  vertical-align: center;
+  width: 444px;
+  height: 24px;
+  padding: 13px 15px;
+  border: 1px solid rgb(3, 186, 64);
+}
+.header .main .search .search_text:focus {
+  outline: none;
 }
 
-.nav2{
-    display: inline;
+.header .main .search .search_btn {
+  width: 52px;
+  height: 52px;
+  padding: 0px;
+  border: 1px solid rgb(3, 186, 64);
 }
 
-.nav2 a{
-    color: white;
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: bold;
-    margin-left: 0.3rem;
+.header {
+  width: 1130px;
+  height: 160px;
 }
 
-#nav{
-    display: flex;
-    flex-direction: row;
-}
-#nav1{
-    display: inline;
-    margin: 0;
-    flex-shrink: 0;
-}
-#nav2{
-    display: inline;
-    padding-left:  0.3rem;
-    margin: 0;
-    flex-shrink: 0;
-}
-#nav3{
-    display: inline;
+.header .category {
+  margin-top: 15px;
 }
 
-#showMore{
-    flex-shrink: 0;
-    padding-left:  1rem;
-    color: white;
-    text-decoration: none;
-    font-size: 1px;
-    align-self: center;
-    padding-bottom: 3px;
-}
-#showMore:hover{
-    text-decoration: underline;
+.header .category ul {
+  margin: 0;
+  padding: 0;
 }
 
-
-#container{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(30,31,33);
-    width: 100%;
-    justify-content: center;
+.header .category ul .greenText a {
+  color: rgb(3, 186, 64);
+  font-size: 15px;
+  font-weight: bolder;
 }
 
-#contentLeft{
-    display: flex;
-    width: 550px;
-    flex-grow: 0;
-    flex-shrink: 0;
+.header .category ul .whiteText a {
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
 }
 
-#SBIAdd{
-    background: url(img/SBIAdd.png);
-    background-size: cover;
-    width: 100%;
-    height: 100px;
-    margin: 20px;
-    border: none;
+.header .category ul div {
+  display: inline-block;
 }
 
-#contentRight{
-    display: flex;
-    width: 240px;
-    flex-grow: 0;
-    flex-shrink: 0;
+.header .category ul li {
+  display: inline-block;
+  margin-left: 10px;
 }
 
-#loginBox{
-    width: 100%;
-    height: 100px;
-    background-color: #393A3C;
-    margin: 10px;
-    padding: 10px;
+.header .center {
+  background-color: rgb(30, 31, 33);
 }
-
-#explainLogin{
-    font-size: 1px;
-    color: aliceblue;
-}
-
-#findIP a{
-    text-decoration: none;
-    font-size: 1px;
-    color: white;
-}
-
-#findIP{
-    margin-right: 30px;
-}
-
-#signIn a{
-    text-decoration: none;
-    font-size: 1px;
-    color: white;
-}
-
-#btnLogin{
-    background:url(img/naverLogin.png);
-    width: 100%;
-    height: 30px;
-    background-size:contain;
-    border: none;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#sign{
-    display: flex;
-}
-
