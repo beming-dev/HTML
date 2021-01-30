@@ -252,22 +252,23 @@ a {
 }
 
 .center .left .subscribedNews .newsstand {
-  font-size: 15px;
+  font-size: 14px;
   color: white;
 }
 
 .center .left .subscribedNews i {
-  font-size: 15px;
+  font-size: 14px;
   color: grey;
 }
 
 .center .left .subscribedNews .press {
-  font-size: 15px;
+  font-size: 14px;
   color: grey;
   margin-right: 10px;
 }
 
 .center .left .subscribedNews .all_press {
+  font-size: 14px;
   color: white;
 }
 
@@ -281,6 +282,69 @@ a {
   margin-left: 15px;
 }
 
+.center .left .press_table{
+  width: 750px;
+  display: grid;
+  grid-template-columns: 124px 124px 124px 124px 124px 124px;
+  grid-template-rows: 65px 65px 65px 65px;
+  grid-column: 1/6;
+  grid-row: 1/4;
+  margin-bottom: 20px;
+}
+
+.center .left .press_table .toPress{
+  width: 124px;
+  height: 65;
+  color: white;
+  text-align: center;
+  border: 1px solid grey;
+}
+
+.center .left .press_table .toPress img{
+  width: 64px;
+  height: 20px;
+  padding: 22px 0px;
+}
+
+.center .left .today_read{
+  width: 750px;
+}
+
+.center .left .today_read .readable_post{
+  color: white;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.center .left .today_read .byTopic{
+  color: grey;
+  font-size: 13px;
+}
+
+.center .left .readable_topic_box1{
+  width: 750px;
+  height: 51px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.center .left .readable_topic_box1 .readable_topic{
+  width: 100px;
+  height: 49px;
+  position: relative;
+  background-color: #292A2D;
+  text-align: center;
+  vertical-align: canter;
+  color: white;
+  display: inline-block;
+  border: 1px solid grey;
+
+  line-height: 49px;
+}
+
+.center .left .readable_topic_box2{
+  visibility: hidden;
+}
 .center .right {
   display: inline-block;
   width: 350px;
