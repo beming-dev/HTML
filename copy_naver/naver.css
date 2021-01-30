@@ -245,6 +245,42 @@ a {
   color: skyblue;
 }
 
+.center .left .subscribedNews {
+  width: 750px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.center .left .subscribedNews .newsstand {
+  font-size: 15px;
+  color: white;
+}
+
+.center .left .subscribedNews i {
+  font-size: 15px;
+  color: grey;
+}
+
+.center .left .subscribedNews .press {
+  font-size: 15px;
+  color: grey;
+  margin-right: 10px;
+}
+
+.center .left .subscribedNews .all_press {
+  color: white;
+}
+
+.center .left .subscribedNews .icons {
+  display: inline-block;
+  margin-left: 350px;
+}
+
+.center .left .subscribedNews .icons i {
+  font-size: 14px;
+  margin-left: 15px;
+}
+
 .center .right {
   display: inline-block;
   width: 350px;
